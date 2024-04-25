@@ -46,24 +46,27 @@
         <% content = params['content'] %>
         <table class="table">
             <tr>
-                <th class="text">会社名</th>
+                <th3 class="text fs-3 fw-bold">送信内容</th3>
+            </tr>
+            <tr>
+                <th>会社名</th>
                 <td class=><%= company %></td>
             </tr>
             <tr>
-                <th class="text">氏名</th>
+                <th>氏名</th>
                 <td><%= name %></td>
             </tr>
             <tr>
-                <th class="text">メール</th>
+                <th>メール</th>
                 <td><%= mail %></td>
             </tr>
             <tr>
-                <th class="text">電話番号</th>
+                <th>電話番号</th>
                 <td><%= tel %></td>
             </tr>
             <tr>
-                <th class="text">内容</th>
-                <td><%= content %></td>
+                <th>内容</th>
+                <td><%= content.gsub(/\r\n|\r|\n/, "<br>") %></td>
             </tr>
         </table>
         <div class="text-center mb-4">
